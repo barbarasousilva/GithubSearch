@@ -6,7 +6,7 @@ import './Button.css'
 const Button = (props) => {
     return (
         <Fragment>
-        <button className='button'><img src={IconePesquisa} alt='Clique aqui' ></img></button>
+            <button className='button'><img src={IconePesquisa} alt='Clique aqui' ></img></button>
         </Fragment>
     )
 }

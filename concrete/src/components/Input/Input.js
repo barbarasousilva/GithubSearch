@@ -2,10 +2,11 @@ import React, { Fragment } from 'react'
 import './Input.css'
 
 const Input = (props) => {
-    return(
+    return (
         <Fragment>
-            <input className='Search-Input'
-            type="text"
+            <input
+                className='Search-Input'
+                type="text"
             ></input>
         </Fragment>
     )
