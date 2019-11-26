@@ -1,0 +1,11 @@
+.Result {
+    width: 1152px;
+    height: 800px;
+    background-color: var(--white);
+  }
+
+.NotFound {
+    width: 1152px;
+    height: 800px;
+    background-color: var(--white);
+  }
