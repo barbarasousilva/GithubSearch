@@ -12,7 +12,7 @@ const Search = (props) => {
                 type="text"
             ></input>
             <Link to='/result'>
-                <button className='button'><img src={SearchIcon} alt='Clique aqui' ></img></button>
+                <button className='button'><img className="Search-Icon" src={SearchIcon} alt='Clique aqui' ></img></button>
             </Link>
         </div>
     )

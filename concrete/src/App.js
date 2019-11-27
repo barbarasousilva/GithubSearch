@@ -8,10 +8,8 @@ import './App.css';
 function App() {
   return (
     <Switch>
-      <div>
         <Route exact path='/' component={Home} />
         <Route path='/Result' component={Result} />
-      </div>
     </Switch>
   )
 }
