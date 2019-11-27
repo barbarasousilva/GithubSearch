@@ -1,0 +1,19 @@
+.search {
+  display: flex;
+  flex-direction: row;
+}
+
+.Search-Input {
+  width: 650px;
+  height: 50px;
+  background-color: var(--white);
+}
+button {
+  width: 100px;
+  height: 50px;
+  border-radius: 2px;
+  background-color: #ac53f2;
+}
+a:link {
+  text-decoration: none;
+}

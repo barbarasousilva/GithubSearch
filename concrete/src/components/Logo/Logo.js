@@ -1,10 +1,13 @@
 import React, { Fragment } from 'react'
+import { Link } from 'react-router-dom'
 import './Logo.css'
 
 const Logo = (props) => {
-    return(
+    return (
         <Fragment>
-             <h1 className="Github-Search">Github<span className="text-style-1">Search</span></h1>
+            <Link to='/'>
+                <h1 className="Github-Search">Github<span className="Github-Search text-style-1"> Search</span></h1>
+            </Link>
         </Fragment>
     )
 }
