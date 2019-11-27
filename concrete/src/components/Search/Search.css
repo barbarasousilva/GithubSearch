@@ -1,6 +1,6 @@
 .search {
   display: flex;
-  flex-direction: row;
+  justify-content: start;
 }
 
 .Search-Input {

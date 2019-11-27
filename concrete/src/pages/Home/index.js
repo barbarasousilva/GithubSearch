@@ -7,8 +7,11 @@ import './style.css'
 const Home = () => {
  return(
      <div className="Home">
-         <Logo />
-         <Search />
+         <Logo 
+         font="Github-Search"
+         fontSpan="text-style-1"/>
+         <Search 
+         />
      </div>
  )
 }

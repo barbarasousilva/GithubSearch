@@ -1,7 +1,12 @@
-.Result {
-    width: 1152px;
-    height: 800px;
+*{
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.result {
+    display: flex;
+    width: 100%;
     background-color: var(--white);
+    padding: 35px;
   }
 
 .NotFound {

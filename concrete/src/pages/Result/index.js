@@ -5,7 +5,10 @@ import './style.css'
 
 const Result = (props) => {
     return(
-        <Nav />
+        <div className="result">
+            <Nav />
+        </div>
+        
     )
 }
 
