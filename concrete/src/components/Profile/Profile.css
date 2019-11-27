@@ -1,8 +1,11 @@
 .profile {
     padding: 20px;
+    line-height: 30px;
 }
 ul li {
     list-style: none;
+    line-height: 30px;
+    padding: 0px;
 }
 
 .user-avatar {
@@ -11,9 +14,8 @@ ul li {
     border-radius: 2px;
     box-shadow: 0 0 4px NaNpx var(--black-40);
   }
-/*
+
   .user-name {
-    width: 280px;
     height: 40px;
     font-family: Raleway;
     font-size: 35px;
@@ -26,7 +28,6 @@ ul li {
   }
 
   .user-login {
-    width: 280px;
     height: 25px;
     font-family: Raleway;
     font-size: 20px;
@@ -101,4 +102,4 @@ ul li {
     line-height: normal;
     letter-spacing: normal;
     color: #5c5c5c;
-  } */ 
+  } 
