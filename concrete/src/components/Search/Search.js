@@ -4,12 +4,13 @@ import { Link } from 'react-router-dom'
 
 import './Search.css'
 
-const Search = (props) => {
+const Search = ({ tipo, pegarValorInput }) => {
     return (
         <div className="search">
             <input
                 className='Search-Input'
-                type="text"
+                type={tipo}
+                onChange={pegarValorInput}
             ></input>
             <Link to='/result'>
                 <button className='button'><img className="Search-Icon" src={SearchIcon} alt='Clique aqui' ></img></button>

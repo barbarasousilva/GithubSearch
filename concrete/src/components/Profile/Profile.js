@@ -1,13 +1,14 @@
 import React, { Fragment } from 'react'
-import Aneesa from '../../assets/aneesa2.jpg'
 
 import './Profile.css'
 
-const Profile = (props) => (
-    <Fragment>
-        <img className={props.imageClass} src={Aneesa} alt=""></img>
-    </Fragment>
-
-)
+const Profile = (props) => {
+    const { imageClass, img } = props
+    return (
+        <Fragment>
+            <img className={imageClass} src={img} alt=""></img>
+        </Fragment>
+    )
+}
 
 export default Profile
