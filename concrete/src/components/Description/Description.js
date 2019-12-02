@@ -4,7 +4,7 @@ import './Description.css'
 
 
 const Description = (props) => {
-    const { nameClass, loginClass, name, login } = props
+    const { nameClass, loginClass, name, description } = props
     return (
 
         <Fragment>
@@ -14,7 +14,7 @@ const Description = (props) => {
             </h2>
             <h3
                 className={loginClass} >
-                {login}
+                {description}
             </h3>
         </Fragment>
     )

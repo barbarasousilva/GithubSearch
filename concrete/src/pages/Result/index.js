@@ -22,7 +22,11 @@ const Result = (props) => {
                     <ul>
                         {repos.map(i => (
                             <li key={i.id}>
-                                <Repo name={i.name} login={i.login}/>
+                                <Repo 
+                                name={i.name} 
+                                description={i.description}
+                                starCount={i.stargazers_count}
+                                />
                             </li>
                         ))}
                     </ul>

@@ -6,7 +6,11 @@ const Profile = (props) => {
     const { imageClass, img } = props
     return (
         <Fragment>
-            <img className={imageClass} src={img} alt=""></img>
+            <img
+                className={imageClass}
+                src={img}
+                alt="">
+            </img>
         </Fragment>
     )
 }
