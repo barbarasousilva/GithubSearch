@@ -1,5 +1,4 @@
 .repo-name {
-    width: 375.5px;
     height: 40.8px;
     font-family: Raleway;
     font-size: 35px;
@@ -12,7 +11,6 @@
   }
 
   .repo-description {
-    width: 600px;
     height: 25.5px;
     font-family: Raleway;
     font-size: 20px;

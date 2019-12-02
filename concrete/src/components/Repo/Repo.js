@@ -5,15 +5,19 @@ import starIcon from '../../assets/star icon.png'
 import './Repo.css'
 
 const Repo = (props) => {
-    console.log(props)
+    const { name, login } = props
     return (
         <div className='repo-margin'>
             <Description
                 nameClass='repo-name'
+                name={name}
                 loginClass='repo-description'
-                nome={props.nome}
+                login={login}
             />
-            <img src={starIcon} alt=''></img>
+            <img
+                src={starIcon}
+                alt=''
+            />
         </div>
     )
 }

@@ -1,6 +1,5 @@
 import React from 'react'
 import SearchIcon from '../../assets/Search Icon.png'
-import { Link } from 'react-router-dom'
 
 import './Search.css'
 
@@ -13,7 +12,6 @@ const Search = (props) => {
                 type={text}
                 onChange={takeInputValue}
             ></input>
-            {/* <Link to='/result'>  */}
             <button
                 onClick={click}
                 className='button'>
@@ -23,7 +21,6 @@ const Search = (props) => {
                     alt='Clique aqui' >
                 </img>
             </button>
-            {/* </Link> */}
         </div>
     )
 }

@@ -6,12 +6,12 @@ import Repo from '../../components/Repo/Repo'
 import './style.css'
 
 const Result = (props) => {
-    
-     const { repos } = props.location.state
-      console.log(repos)
+
+    const { repos } = props.location.state
+    console.log(repos)
     return (
         <Fragment>
-            <div className='result-nav'>
+            <div className='result'>
                 <Nav />
             </div>
             <div className='result-flex'>
@@ -22,8 +22,8 @@ const Result = (props) => {
                     <ul>
                         {repos.map(i => (
                             <li key={i.id}>
-                                <Repo nome={i.name}/>
-                             </li>
+                                <Repo name={i.name} login={i.login}/>
+                            </li>
                         ))}
                     </ul>
                 </div>

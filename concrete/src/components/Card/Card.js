@@ -1,9 +1,9 @@
-import React, { Fragment } from 'react'
+import React, {Component} from 'react'
 import Profile from '../../components/Profile/Profile'
 import Description from '../../components/Description/Description'
 import Information from '../../components/Information/Information'
 
-const Card = (props) => {
+const Card = () => {
     return (
         <div className="profile">
             <Profile

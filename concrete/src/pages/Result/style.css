@@ -11,6 +11,15 @@
     background-color: var(--white);
     padding: 35px;
   }
+  
+  .result-flex {
+    display: flex;
+
+}
+
+.result-margin {
+    margin: 0;
+}
 
 .NotFound {
     width: 1152px;

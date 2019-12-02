@@ -43,11 +43,10 @@ class Home extends Component {
 
     render() {
         return (
-            <div className='home'>
+            <div className='Home'>
                 <Logo
                     font="Github-Search"
                     fontSpan="text-style-1"/>
-                />
                 <Search
                     click={() => this.searchRepos(this.state.value)}
                     takeInputValue={this.catchValue}
