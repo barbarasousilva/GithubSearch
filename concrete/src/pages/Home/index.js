@@ -45,6 +45,11 @@ class Home extends Component {
         })
     }
 
+    handleClick(login){
+        this.searchUser();
+        this.searchRepos(login);
+    }
+
     render() {
         return (
             <div className='Home'>
@@ -52,8 +57,8 @@ class Home extends Component {
                     font="Github-Search"
                     fontSpan="text-style-1" />
                 <Search
-                    click={() => 
-                        this.searchRepos(this.state.value) 
+                    click={() =>
+                        this.handleClick(this.state.value)
                     }
                     takeInputValue={this.catchValue}
                 />
