@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import Logo from '../../components/Logo/Logo'
 import Search from '../../components/Search/Search'
 import { getUser, getRepos } from '../../api/users'
@@ -22,21 +22,25 @@ class Home extends Component {
         })
     }
 
+
     searchUser = () => {
-        getUser(this.state.value).then((res) => {
-            this.setState({
-                user: res.data
-            })
-        }
-        ).catch(error => console.log(error))
+        getUser(this.state.value)
+            .then((res) => {
+                this.setState({
+                    user: res.data
+                })
+            }
+            ).catch(error => console.log(error))
     }
 
     searchRepos = (login) => {
         getRepos(login).then((res) => {
             console.log(res)
-           this.props.history.push({
+            this.props.history.push({
                 pathname: '/result',
-                state: { repos: res.data }
+                state: {
+                    repos: res.data
+                }
             })
         })
     }
@@ -46,9 +50,11 @@ class Home extends Component {
             <div className='Home'>
                 <Logo
                     font="Github-Search"
-                    fontSpan="text-style-1"/>
+                    fontSpan="text-style-1" />
                 <Search
-                    click={() => this.searchRepos(this.state.value)}
+                    click={() => 
+                        this.searchRepos(this.state.value) 
+                    }
                     takeInputValue={this.catchValue}
                 />
             </div>
