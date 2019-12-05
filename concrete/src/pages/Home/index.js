@@ -45,7 +45,7 @@ class Home extends Component {
         })
     }
 
-    handleClick(login){
+    handleClick(login) {
         this.searchUser();
         this.searchRepos(login);
     }
