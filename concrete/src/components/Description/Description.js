@@ -8,14 +8,14 @@ const Description = (props) => {
     return (
 
         <Fragment>
-            <h2
+            <span
                 className={nameClass} >
                 {name}
-            </h2>
-            <h3
+            </span>
+            <span
                 className={loginClass} >
                 {description}
-            </h3>
+            </span>
         </Fragment>
     )
 }

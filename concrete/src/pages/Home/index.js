@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Logo from '../../components/Logo/Logo'
 import Search from '../../components/Search/Search'
-import { getUser, getRepos } from '../../api/users'
+import { getUser } from '../../api/users'
 
 import './style.css'
 
@@ -12,7 +12,7 @@ class Home extends Component {
         this.state = {
             value: '',
             user: {},
-            repos: {}
+            repos: [],
         }
     }
 
@@ -23,32 +23,26 @@ class Home extends Component {
     }
 
 
-    searchUser = () => {
-        getUser(this.state.value)
-            .then((res) => {
-                this.setState({
-                    user: res.data
+    search = () => {
+        if (this.state.value !== "") {
+
+            getUser(this.state.value)
+                .then(res => {
+                    this.setState({
+                        user: res.data
+                    })
+                    this.props.history.push({
+                        pathname: "/result",
+                        state: {
+                            user: this.state.user
+                        }
+                    })
+                }).catch(error => {
+                    console.log('error');
                 })
-            }
-            ).catch(error => console.log(error))
+        }
     }
 
-    searchRepos = (login) => {
-        getRepos(login).then((res) => {
-            console.log(res)
-            this.props.history.push({
-                pathname: '/result',
-                state: {
-                    repos: res.data
-                }
-            })
-        })
-    }
-
-    handleClick(login) {
-        this.searchUser();
-        this.searchRepos(login);
-    }
 
     render() {
         return (
@@ -57,10 +51,8 @@ class Home extends Component {
                     font="Github-Search"
                     fontSpan="text-style-1" />
                 <Search
-                    click={() =>
-                        this.handleClick(this.state.value)
-                    }
                     takeInputValue={this.catchValue}
+                    click={this.search}
                 />
             </div>
         )

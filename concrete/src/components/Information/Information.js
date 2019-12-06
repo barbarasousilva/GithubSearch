@@ -14,11 +14,11 @@ const Information = (props) => {
     return (
         <Fragment>
             <ul>
-                <li><img src={iconOrganization}></img> <span>{organization}</span></li>
-                <li><img src={iconLocation}></img><span>{location}</span></li>
-                <li><img src={iconStar}></img><span>{star}</span></li>
-                <li><img src={iconRepositories}></img>{repositories}<span></span></li>
-                <li><img src={iconFollowers}></img><span>{followers}</span></li>
+                <li><img src={iconOrganization} alt=''></img> <span>{organization}</span></li>
+                <li><img src={iconLocation} alt=''></img><span>{location}</span></li>
+                <li><img src={iconStar} alt=''></img><span>{star}</span></li>
+                <li><img src={iconRepositories} alt=''></img>{repositories}<span></span></li>
+                <li><img src={iconFollowers} alt=''></img><span>{followers}</span></li>
             </ul>
         </Fragment>
     )

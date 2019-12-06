@@ -7,7 +7,7 @@ const Profile = (props) => {
     return (
         <Fragment>
             <img
-                className={imageClass}
+                className='user-avatar'
                 src={avatar_url}
                 alt="">
             </img>
