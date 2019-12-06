@@ -6,7 +6,7 @@ const NotFound = () => {
     return (
         <Fragment>
             <div className='Not-found-message'>
-                <p> User not found =( </p>
+                <p> User not found :( </p>
             </div>
         </Fragment>
     )

@@ -11,6 +11,7 @@ class Home extends Component {
         super(props)
         this.state = {
             value: '',
+            error: '',
             user: {},
             repos: [],
         }
@@ -24,12 +25,13 @@ class Home extends Component {
 
 
     search = () => {
-        if (this.state.value !== "") {
+        if (this.state.value !== '') {
 
             getUser(this.state.value)
                 .then(res => {
                     this.setState({
-                        user: res.data
+                        user: res.data,
+                        error: ''
                     })
                     this.props.history.push({
                         pathname: "/result",
@@ -38,7 +40,15 @@ class Home extends Component {
                         }
                     })
                 }).catch(error => {
-                    console.log('error');
+                    this.setState({
+                        error: 'Not found :('
+                    })
+                    this.props.history.push({
+                        pathname: '/result',
+                        state: {
+                            error: this.state.error
+                        }
+                    })
                 })
         }
     }
@@ -52,7 +62,9 @@ class Home extends Component {
                     fontSpan="text-style-1" />
                 <Search
                     takeInputValue={this.catchValue}
-                    click={this.search}
+                    click={() =>
+                        this.search(this.state.value)
+                    }
                 />
             </div>
         )

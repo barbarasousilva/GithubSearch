@@ -30,7 +30,7 @@ class Result extends Component {
             }
             if (this.props.location.state.error) {
                 this.setState({
-                    error: 'User not found =('
+                    error: 'User not found :('
                 })
             }
         }
@@ -42,6 +42,11 @@ class Result extends Component {
                 user: res.data
             })
         })
+        .catch(error => {
+            this.setState({
+                error: 'Not found :('
+            })
+        })
     }
 
     searchRepos = (name) => {
@@ -50,6 +55,8 @@ class Result extends Component {
                 repos: res.data
             })
         })
+        .catch(error => {
+        })
     }
 
     catchValue = (event) => {
@@ -57,7 +64,7 @@ class Result extends Component {
             value: event.target.value
         })
     }
-    search = event => {
+    search = value => {
         this.searchUser(this.state.value)
         this.searchRepos(this.state.value)
     }
@@ -72,9 +79,9 @@ class Result extends Component {
                         takeInputValue={this.catchValue} />
                 </div>
 
-                {this.state.error === '' ?
-                    <div className='result-flex'>
-                        <div className='result-margin'>
+                {!this.state.error ?
+                    <div className='result-flex result-margin'>
+                        <div>
                             <Profile
                                 avatar_url={avatar_url} />
                             <Description
