@@ -3,7 +3,7 @@ import React, { Fragment } from 'react'
 import './Profile.css'
 
 const Profile = (props) => {
-    const { imageClass, avatar_url } = props
+    const {  avatar_url } = props
     return (
         <Fragment>
             <img
