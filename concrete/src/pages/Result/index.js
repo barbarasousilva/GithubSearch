@@ -1,6 +1,5 @@
 import React, { Fragment, Component } from 'react'
 import Nav from '../../components/Nav/Nav'
-import Card from '../../components/Card/Card'
 import Repo from '../../components/Repo/Repo'
 import Profile from '../../components/Profile/Profile'
 import Description from '../../components/Description/Description'
