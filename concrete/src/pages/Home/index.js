@@ -12,8 +12,7 @@ class Home extends Component {
         this.state = {
             value: '',
             error: '',
-            user: {},
-            repos: [],
+            user: {}
         }
     }
 
@@ -25,32 +24,32 @@ class Home extends Component {
 
 
     search = () => {
-        if (this.state.value !== '') {
 
-            getUser(this.state.value)
-                .then(res => {
-                    this.setState({
-                        user: res.data,
-                        error: ''
-                    })
-                    this.props.history.push({
-                        pathname: "/result",
-                        state: {
-                            user: this.state.user
-                        }
-                    })
-                }).catch(error => {
-                    this.setState({
-                        error: 'Not found :('
-                    })
-                    this.props.history.push({
-                        pathname: '/result',
-                        state: {
-                            error: this.state.error
-                        }
-                    })
+        getUser(this.state.value)
+            .then(res => {
+                this.setState({
+                    user: res.data,
+                    error: '',
+                    value: ''
                 })
-        }
+                this.props.history.push({
+                    pathname: "/result",
+                    state: {
+                        user: this.state.user
+                    }
+                })
+            }).catch(() => {
+                this.setState({
+                    error: 'Not found :('
+                })
+                this.props.history.push({
+                    pathname: '/result',
+                    state: {
+                        error: this.state.error
+                    }
+                })
+            })
+
     }
 
 

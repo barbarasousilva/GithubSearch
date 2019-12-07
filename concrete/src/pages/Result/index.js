@@ -20,6 +20,10 @@ class Result extends Component {
         }
     }
 
+    changeUser = user => {
+        this.setState({ value: user.target.value })
+    }
+
     componentDidMount() {
         if (this.props.location.state) {
             if (this.props.location.state.user) {
@@ -75,8 +79,9 @@ class Result extends Component {
             <Fragment>
                 <div className='result'>
                     <Nav
-                        click={this.search}
-                        takeInputValue={this.catchValue} />
+                        // click={this.search}
+                        // takeInputValue={this.catchValue}
+                        changeUser={this.changeUser} />
                 </div>
 
                 {!this.state.error ?

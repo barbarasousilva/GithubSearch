@@ -5,8 +5,8 @@ import './NotFound.css'
 const NotFound = () => {
     return (
         <Fragment>
-            <div className='Not-found-message'>
-                <p> User not found :( </p>
+            <div>
+                <p className='Not-found-message'> User not found :( </p>
             </div>
         </Fragment>
     )
