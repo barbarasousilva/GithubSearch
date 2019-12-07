@@ -20,55 +20,52 @@ class Result extends Component {
         }
     }
 
-    changeUser = user => {
-        this.setState({ value: user.target.value })
-    }
 
     componentDidMount() {
         if (this.props.location.state) {
             if (this.props.location.state.user) {
-                this.searchRepos(this.props.location.state.user.login)
                 this.setState({
                     user: this.props.location.state.user
                 })
+                this.searchRepos(this.props.location.state.user.login)
             }
             if (this.props.location.state.error) {
                 this.setState({
-                    error: 'User not found :('
+                    err: this.props.location.state.error
                 })
             }
         }
     }
-
-    searchUser = (value) => {
-        getUser(value).then(res => {
-            this.setState({
-                user: res.data
-            })
-        })
-        .catch(error => {
-            this.setState({
-                error: 'Not found :('
-            })
-        })
-    }
-
-    searchRepos = (name) => {
-        getRepos(name).then(res => {
-            this.setState({
-                repos: res.data
-            })
-        })
-        .catch(error => {
-        })
-    }
-
+    
     catchValue = (event) => {
         this.setState({
             value: event.target.value
         })
     }
-    search = value => {
+
+    searchUser = (value) => {
+        getUser(value).then(res => {
+            this.setState({
+                user: res.data,
+                error: ''
+            })
+        })
+            .catch((error) => {
+                this.setState({
+                    error: 'User not found :('
+                })
+            })
+    }
+
+    searchRepos = (value) => {
+        getRepos(value).then(res => {
+            this.setState({
+                repos: res.data
+            })
+        })
+    }
+
+    search = () => {
         this.searchUser(this.state.value)
         this.searchRepos(this.state.value)
     }
@@ -79,8 +76,8 @@ class Result extends Component {
             <Fragment>
                 <div className='result'>
                     <Nav
-                        // click={this.search}
-                        // takeInputValue={this.catchValue}
+                        click={this.search}
+                        takeInputValue={this.catchValue}
                         changeUser={this.changeUser} />
                 </div>
 
