@@ -9,9 +9,9 @@ import './App.css';
 function App() {
   return (
     <Switch>
-        <Route exact path='/' component={Home} />
-        <Route path='/Result' component={Result} />
-        <Route path='/repos' component={Repo} />
+      <Route exact path='/' component={Home} />
+      <Route path='/result' component={Result} />
+      <Route path='/repos' component={Repo} />
     </Switch>
   )
 }

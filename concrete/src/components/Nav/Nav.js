@@ -4,15 +4,15 @@ import Search from '../../components/Search/Search'
 import './Nav.css'
 
 const Nav = (props) => {
-    const { takeInputValue, click} = props
+    const { takeInputValue, click } = props
     return (
         <Fragment>
-            <Logo 
-            font="Github-Result"
-            fontSpan="Github-Result text-style-2"/>
-            <Search 
-            takeInputValue={takeInputValue}
-            click={click}/>
+            <Logo
+                font='Github-Result'
+                fontSpan='Github-Result text-style-2' />
+            <Search
+                takeInputValue={takeInputValue}
+                click={click} />
         </Fragment>
     )
 }

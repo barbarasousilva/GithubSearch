@@ -36,7 +36,7 @@ class Result extends Component {
             }
         }
     }
-    
+
     catchValue = (event) => {
         this.setState({
             value: event.target.value

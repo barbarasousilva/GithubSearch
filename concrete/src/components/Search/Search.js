@@ -6,7 +6,7 @@ import './Search.css'
 const Search = (props) => {
     const { text, takeInputValue, click } = props
     return (
-        <div className="search">
+        <div className='search'>
             <input
                 className='Search-Input'
                 type={text}
@@ -16,7 +16,7 @@ const Search = (props) => {
                 onClick={click}
                 className='button'>
                 <img
-                    className="Search-Icon"
+                    className='Search-Icon'
                     src={SearchIcon}
                     alt='Clique aqui' >
                 </img>

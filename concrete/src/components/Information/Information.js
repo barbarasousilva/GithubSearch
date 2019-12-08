@@ -10,7 +10,7 @@ import './Information.css'
 
 
 const Information = (props) => {
-    const {organization, location, star, repositories, followers} = props
+    const { organization, location, star, repositories, followers } = props
     return (
         <Fragment>
             <ul>

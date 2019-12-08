@@ -33,7 +33,7 @@ class Home extends Component {
                     value: ''
                 })
                 this.props.history.push({
-                    pathname: "/result",
+                    pathname: '/result',
                     state: {
                         user: this.state.user
                     }
@@ -57,8 +57,8 @@ class Home extends Component {
         return (
             <div className='Home'>
                 <Logo
-                    font="Github-Search"
-                    fontSpan="text-style-1" />
+                    font='Github-Search'
+                    fontSpan='text-style-1' />
                 <Search
                     takeInputValue={this.catchValue}
                     click={() =>
