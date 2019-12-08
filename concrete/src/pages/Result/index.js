@@ -100,7 +100,7 @@ class Result extends Component {
                                 followers={following}
                             />
                         </div>
-                        <div>
+                        <div className='repos-container'>
                             <ul>
                                 {this.state.repos.map(i => (
                                     <li key={i.id}>

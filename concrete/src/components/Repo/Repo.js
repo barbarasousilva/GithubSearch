@@ -17,7 +17,7 @@ const Repo = (props) => {
             <img
                 src={starIcon}
                 alt=''
-    ></img><span className='star-count'>{starCount}</span>
+            ></img><span className='star-count'>{starCount}</span>
         </div>
     )
 }

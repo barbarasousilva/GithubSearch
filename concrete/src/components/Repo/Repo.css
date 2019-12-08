@@ -1,6 +1,5 @@
 .repo-name {
     display: flex;
-    height: 40.8px;
     font-family: Raleway;
     font-size: 35px;
     font-weight: normal;
@@ -13,7 +12,6 @@
 
   .repo-description {
     display: flex;
-    height: 25.5px;
     font-family: Raleway;
     font-size: 20px;
     font-weight: 300;
@@ -25,6 +23,7 @@
   }
 
   .star-icon {
+    display: flex;
     width: 25.5px;
     height: 24.5px;
   }
@@ -43,7 +42,9 @@
   }
 
   .repo-margin {
-    margin-top: 60px;
+    margin-top: 40px;
+    padding-left: 20px;
+    padding-right: 30px;
 }
 ul li {
   list-style: none;
